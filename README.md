@@ -27,25 +27,25 @@ In this project, you will **write unit tests and the implementation code** for a
 
 Follow these steps to setup your git _fork_ and _branch_.
 
-- [ ] Fork this repository.
-- [ ] Use GitHub's website to add your project manager as collaborator on **your fork**.
-- [ ] **Clone your forked version** of the repository (**Not Lambda's**!).
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Commit changes to your `<firstName-lastName>` branch.
-- [ ] Push often to your branch: `git push origin <firstName-lastName>`.
+- [x] Fork this repository.
+- [x] Use GitHub's website to add your project manager as collaborator on **your fork**.
+- [x] **Clone your forked version** of the repository (**Not Lambda's**!).
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Commit changes to your `<firstName-lastName>` branch.
+- [x] Push often to your branch: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge the `<firstName-lastName>` branch into the master branch on your fork. **Please don't merge your own pull request**
-- [ ] Use GitHub's website to add your project manager as a reviewer on the pull-request.
-- [ ] Your project manager will count the project as complete by merging the branch back into the master branch of your forked repository.
+- [x] Submit a Pull-Request to merge the `<firstName-lastName>` branch into the master branch on your fork. **Please don't merge your own pull request**
+- [x] Use GitHub's website to add your project manager as a reviewer on the pull-request.
+- [x] Your project manager will count the project as complete by merging the branch back into the master branch of your forked repository.
 
 ## Minimum Viable Product
 
 After a set of interviews with the potential users of the solution, we gathered the following information about the functionality of the game's enhancing system. Your job is to add tests to `./enhancing/enhancer.spec.js` and code to `./enhancing/enhancer.js` to implement the requirements; `./enhancing/enhancer.js` exports an object that has the following methods:
 
-- a `repair(item)` method that accepts an `item` object and **returns a new item** with the durability restored to 100. This method is the simplest of the three and would be a **good starting point** on this project.
-- a `success(item)` method that accepts an `item` object and **returns a new item** object modified according to the rules defined by the client for enhancement success.
+- [x] a `repair(item)` method that accepts an `item` object and **returns a new item** with the durability restored to 100. This method is the simplest of the three and would be a **good starting point** on this project.
+- [x] a `success(item)` method that accepts an `item` object and **returns a new item** object modified according to the rules defined by the client for enhancement success.
 - a `fail(item)` method that accepts an `item` object and **returns a new item** object modified according to the rules defined by the client for enhancement failure.
 - a `get()` method for use when working on the stretch problem.
 
@@ -59,9 +59,9 @@ The following sections list information provided by the client about `items` and
 
 ### When enhancement succeeds
 
-- The item's enhancement increases by 1.
-- If the item enhancement level is 20, the enhancement level is not changed.
-- The durability of the item is not changed.
+- [x] The item's enhancement increases by 1.
+- [x] If the item enhancement level is 20, the enhancement level is not changed.
+- [x] The durability of the item is not changed.
 
 ### When enhancement fails
 
