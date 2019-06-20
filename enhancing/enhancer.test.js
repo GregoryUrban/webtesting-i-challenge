@@ -29,15 +29,16 @@ describe('enhancer.js', () => {
             // it.todo('should have a max of 100 durability') // this is to comment in console what is being tested
 
             describe("succeed()", () => {
-                it("should increase enhancement by 1", () => {
+                // The item's enhancement increases by 1.
+                it("should increase enhancement by 1 without changing durability", () => {
                   const item = {
-                    name: "Shota",
-                    durability: 10,
+                    name: "Greg",
+                    durability: 20,
                     enhancement: 15
                   };
                   const expected = {
-                    name: "Shota",
-                    durability: 100,
+                    name: "Greg",
+                    durability: 20,
                     enhancement: 16
                   };
             
@@ -45,7 +46,8 @@ describe('enhancer.js', () => {
                   expect(enhancedItem).toEqual(expected);
                 });
 
-                it("should increase enhancement by none", () => {
+                //If the item enhancement level is 20, the enhancement level is not changed
+                it("should NOT increase enhancement NOR durability", () => {
                     const item = {
                       name: "Shota",
                       durability: 10,
@@ -53,7 +55,7 @@ describe('enhancer.js', () => {
                     };
                     const expected = {
                       name: "Shota",
-                      durability: 100,
+                      durability: 10,
                       enhancement: 20
                     };
               
