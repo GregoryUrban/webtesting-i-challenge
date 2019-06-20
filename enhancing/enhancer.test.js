@@ -1,4 +1,4 @@
-const { repair, succeed } = require('./enhancer.js')
+const { repair, succeed, fail } = require('./enhancer.js')
 // test away!
 
 
@@ -64,6 +64,62 @@ describe('enhancer.js', () => {
                   });
 
               });
+
+
+describe("fail()", () => {
+// - If the item's enhancement is less than 15, the durability of the item is decreased by 5.
+    it("decrease durability by 5 if enhancement is less than 15", () => {
+      const item = {
+        name: "Greg",
+        durability: 50,
+        enhancement: 14
+      };
+
+      const expected = {
+        name: "Greg",
+        durability: 45,
+        enhancement: 14
+      };
+
+      const failItem = fail(item);
+      expect(failItem).toEqual(expected);
+    });
+// - If the item's enhancement is 15 or more, the durability of the item is decreased by 10.
+    it("decrease durability by 10 if enhancement is 15 or more", () => {
+      const item = {
+        name: "Greg",
+        durability: 50,
+        enhancement: 16
+      };
+
+      const expected = {
+        name: "Greg",
+        durability: 40,
+        enhancement: 16
+      };
+
+      const failItem = fail(item);
+      expect(failItem).toEqual(expected);
+    });
+// - If the item's enhancement level is greater than 16, the enhancement level decreases by 1 (17 goes down to 16, 18 goes down to 17).
+    it("decrease enhancement by 1 if enhancement is greater than 16", () => {
+      const item = {
+        name: "Greg",
+        durability: 50,
+        enhancement: 18
+      };
+
+      const expected = {
+        name: "Greg",
+        durability: 50,
+        enhancement: 17
+      };
+
+      const failItem = fail(item);
+      expect(failItem).toEqual(expected);
+    });
+  });
+
 
     })
 })
