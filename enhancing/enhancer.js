@@ -60,6 +60,20 @@ function repair(item) {
   return newItem;
 }
 
+// if the enhancement level is 0, the the name is not modified.
+// if the enhancement level is greater than 0, change the name to include the enhancement level
 function get(item) {
-  return { ...item };
+  if (item.enhancement === 0)  {  const newItem = {
+    name: item.name,
+    durability: item.durability,
+    enhancement: 0
+  }
+  return newItem;
+  } else {
+    return ({ 
+      name: `[+${item.enhancement}] ${item.name}`,
+      durability: item.durability,
+      enhancement: item.enhancement 
+    });
+  }
 }
